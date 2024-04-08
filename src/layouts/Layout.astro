@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
 ---
 
 <!doctype html>
@@ -16,36 +17,66 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<header class="container max-w-7xl mx-auto h-16 flex items-center">
+		<div class="flex space-x-5">
+			<img class="h-6" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="">
+			<div class="w-[2px] h-6 bg-slate-800"></div>
+		    <img class="h-6" src="xboxlogo(verde).png" alt="">
+		</div>
+		
+
+		<menu class="ml-4  flex items-center">
+			<a href="#" class="hover:underline-offset-[6px] decoration-2 flex items-center mx-3 justify-center">
+				Game pass
+				<Icon name="mdi:chevron-down" />
+			</a>
+			<br>
+			<a href="#" class="hover:underline-offset-[6px] decoration-slice flex items-center mx-2 justify-center">
+				juegos 
+				<Icon name="mdi:chevron-down" />
+			</a>
+			<br>
+			<a href="#" class="hover:underline-offset-[6px] decoration-slice flex items-center mx-2 justify-center">
+				Dispositivos  
+				<Icon name="mdi:chevron-down" />
+			</a>
+			<br>
+			<a href="#" class="hover:underline-offset-[6px] decoration-slice flex items-center mx-2 justify-center">
+				Juega 
+			</a> 
+			<a href="#" class="hover:underline-offset-[6px] decoration-slice flex items-center mx-2 justify-center">
+				Comunidad 
+				<Icon name="mdi:chevron-down" />
+			</a>
+			<a href="#" class="hover:underline-offset-[6px] decoration-slice flex items-center mx-2 justify-center">
+				Más
+				<Icon name="mdi:chevron-down" />
+			</a>
+			<menu class="ml-44 flex items-center">
+				<a href="#" class="hover:underline-offset-[6px] decoration-2 flex items-center mx-3 justify-center">
+					Todo Microsoft 
+					<Icon name="mdi:chevron-down" />
+				</a>
+				<Icon name="mdi:search" class="mr-7" />
+				<Icon class="size-5" name="mdi:shopping-cart-outline"  class="mr-5" />
+				<Icon class="size-7" name="mdi:user-add-outline" />
+			</menu>
+
+		</menu>
+
+	</header>
+
+
+
+
+
+
+
+
 	<body>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	
 </style>
